@@ -1,26 +1,43 @@
 import React from 'react';
-import listSvg from './assets/img/list.svg'
-
-
+import Index from './components/List';
+import listSvg from "./assets/img/list.svg";
+import List from './components/List'
 
 function App() {
   return (
     <div className="todo">
       <div className="todo__sidebar">
-          <ul className="todo__list">
-              <li className="active">
-                  <i>
-                      <img src={listSvg} alt="List Icon"/>
-                  </i>
-                  <span>All tasks</span>
-              </li>
-              <li>
-                  <i>
-                      <img src={listSvg} alt="List Icon"/>
-                  </i>
-                  <span>All tasks</span>
-              </li>
-          </ul>
+        <Index items={[
+            {
+                icon: <img src={listSvg} alt="Index Icon"/>,
+                name: 'All Tasks',
+                active: true
+
+            }
+        ]}/>
+          <Index items={[
+              {
+                  color: 'green',
+                  name: 'Buy'
+
+              },
+              {
+                  color: 'blue',
+                  name: 'Movies'
+
+              },
+              {
+                  color: 'greenLite',
+                  name: 'Books'
+
+              },
+              {
+                  color: 'pinkLite',
+                  name: 'Private',
+
+
+              }
+          ]}/>
       </div>
         <div className="todo__tasks">Tasks</div>
     </div>
