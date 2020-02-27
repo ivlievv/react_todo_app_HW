@@ -28,7 +28,7 @@ body {
   &__sidebar{
     background-color: #eff1eb;
     width: 200px;
-    height: 100%;
+    height: calc(100% - 120px);
     border-right: 1px solid #dcded8;
     padding: 60px 20px;
   }
